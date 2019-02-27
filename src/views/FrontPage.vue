@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     ctx.globalCompositeOperation = "lighter";
     
+    // eslint-disable-next-line
     for (var i = 0, x = stars.length; i < x; i++) {
       var s = stars[i];
     
@@ -55,10 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     ctx.beginPath();
+    // eslint-disable-next-line
     for (var i = 0, x = stars.length; i < x; i++) {
       var starI = stars[i];
       ctx.moveTo(starI.x,starI.y); 
       if(distance(mouse, starI) < 150) ctx.lineTo(mouse.x, mouse.y);
+      // eslint-disable-next-line
       for (var j = 0, x = stars.length; j < x; j++) {
         var starII = stars[j];
         if(distance(starI, starII) < 150) {
